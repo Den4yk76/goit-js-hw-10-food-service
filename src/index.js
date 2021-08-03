@@ -1,5 +1,8 @@
-import menuItemTempl from './templates/menu-template.hbs';
-import menu from './menu.json';
+import { func } from 'assert-plus';
+import menuItemTempl from './src/templates/menu-template.hbs';
+
+const checkbox = document.querySelector('#theme-switch-toggle');
+const bodyEl = document.querySelector('body');
 
 const Theme = {
   LIGHT: 'light-theme',
