@@ -1,13 +1,14 @@
-import { func } from 'assert-plus';
 import menuItemTempl from './src/templates/menu-template.hbs';
-
-const checkbox = document.querySelector('#theme-switch-toggle');
-const bodyEl = document.querySelector('body');
+import menu from './src/menu.json';
 
 const Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme',
 };
+
+const checkbox = document.querySelector('#theme-switch-toggle');
+const bodyEl = document.querySelector('body');
+const menuEl = document.querySelector('.js-menu');
 
 if (localStorage.theme === Theme.DARK) {
   checkbox.checked = true;
@@ -15,7 +16,6 @@ if (localStorage.theme === Theme.DARK) {
 }
 
 checkbox.addEventListener('change', onCheckboxChange);
-
 function onCheckboxChange(e) {
   if (checkbox.checked === true) {
     bodyEl.classList.add(Theme.DARK);
@@ -28,6 +28,4 @@ function onCheckboxChange(e) {
   }
 }
 
-function createMenu(e) {
-  return;
-}
+menuEl.insertAdjacentHTML('beforeend', menuItemTempl(menu));
