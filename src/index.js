@@ -1,5 +1,5 @@
-import menuItemTempl from './src/templates/menu-template.hbs';
-import menu from './src/menu.json';
+import menuItemTempl from './templates/menu-template.hbs';
+import menu from './menu.json';
 
 const Theme = {
   LIGHT: 'light-theme',
