@@ -1,4 +1,4 @@
-import menuItemTempl from './src/templates/menu-template.hbs';
+import menuItemTempl from './templates/menu-template.hbs';
 import menu from './menu.json';
 
 const Theme = {
