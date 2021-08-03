@@ -1,5 +1,6 @@
 import menuItemTempl from './templates/menu-template.hbs';
 import menu from './menu.json';
+const ghpages = require('gh-pages');
 
 const Theme = {
   LIGHT: 'light-theme',
